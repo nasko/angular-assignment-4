@@ -14,4 +14,25 @@
       </ol>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control
+        (numberGenerated)="onNumberGenerated($event)"></app-game-control>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <app-odd *ngFor="let odd of odds">
+        <p>Odd - <strong>{{ odd }}</strong></p>
+      </app-odd>
+    </div>
+
+    <div class="col-xs-6">
+      <app-even *ngFor="let even of evens">
+        <p>Even - <strong>{{ even }}</strong></p>
+      </app-even>
+    </div>
+  </div>
 </div>
